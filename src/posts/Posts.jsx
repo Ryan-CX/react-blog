@@ -1,8 +1,4 @@
-import './post.css'
+import './post.css';
 export default function Posts() {
-    return (
-        <div className='posts'>
-            
-        </div>
-    )
+	return <div className='posts'>posts</div>;
 }
