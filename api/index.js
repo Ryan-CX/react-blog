@@ -7,7 +7,8 @@ const mongoose = require('mongoose');
 dotenv.config();
 app.use(express.json()); //used to be body parser
 const authRoute = require('./routes/auth');
-const userRoute = require('./routes/auth');
+const userRoute = require('./routes/users');
+const postRoute = require('./routes/posts');
 mongoose
 	.connect(process.env.MONGO, {
 		useNewUrlParser: true,
@@ -21,6 +22,7 @@ mongoose
 
 app.use('/api/auth', authRoute);
 app.use('/api/users', userRoute);
+app.use('/api/posts', postRoute);
 
 app.listen(PORT, () => {
 	console.log('backend is running');
