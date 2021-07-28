@@ -39,6 +39,7 @@ router.put('/:id', async (req, res) => {
 		res.status(500).json(err);
 	}
 });
+
 //DELETE POST
 router.delete('/:id', async (req, res) => {
 	try {
